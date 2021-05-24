@@ -116,7 +116,77 @@
             text-align: center;
             box-shadow: 0 0 10px rgba(70, 69, 69, 0.664);
         }
-        
+        #warning{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: #2b2b2ba2;
+            display: none;
+        }
+        .w-card{
+            max-width: 650px;
+            width: 94%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .w-heading{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            align-items: center;
+            background-image: linear-gradient( 181deg,  rgba(2,0,97,1) 15%, rgba(97,149,219,1) 158.5% );
+            background-image: linear-gradient( 109.6deg,  rgba(61,121,176,1) 11.3%, rgba(35,66,164,1) 91.1% );
+        }
+        .w-heading img{
+            width: 10%;
+        }
+        .w-heading h3{
+            color: #fff;
+            letter-spacing: 2px;
+            padding: 1rem 0;
+            font-size: 25px;
+            text-shadow: 0px 4px 3px #83757f;
+            font-weight: 800;
+        }
+        #w-text{
+           color: #8b8b8b;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 20px;
+        }
+        .w-body{
+            background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(239,246,249,1) 0%, rgba(206,239,253,1) 90% );
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+        .w-body img{
+            width: 30%;
+        }
+        .w-btn{
+            background: #ddd;
+            padding: 1rem;
+            text-align: right;
+        }
+        .w-btn button{
+            display: inline-block;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            padding: 0.5rem 2rem;
+            color: #fff;
+            font-size: 20px;
+            letter-spacing: 1px;
+            font-weight: 800;
+            cursor: pointer;
+            background-image: linear-gradient( 180.6deg, rgba(141, 123, 228, 1) -21.6%, rgba(147, 137, 246, 1) -0.6%, rgba(83, 75, 197, 1) 27.9%, rgba(54, 44, 165, 1) 60.1%, rgba(39, 25, 78, 1) 93.9%);
+        }
         @media all and (max-width:500px) {
             .name-input {
                 display: block;
@@ -137,6 +207,22 @@
             }
             .name-input div {
                 margin-bottom: 0.5rem;
+            }
+            .card button:hover {
+                background-image: linear-gradient( 180.3deg, rgba(10, 86, 199, 1) 23.7%, rgba(61, 166, 255, 1) 101.5%);
+            }
+            .w-heading h3{
+                font-size: 20px;
+            }
+            #w-text{
+                font-size: 14px;
+            }
+            .w-btn button{
+                width: 100%;
+                font-size: 16px;
+            }
+            .warning{
+                background: #2b2b2bbf;
             }
         }
     </style>
@@ -166,6 +252,21 @@
                 </form>
             </div>
             <div class="card-footer">God Bless Your RelationShip</div>
+        </div>
+        <div id="warning">
+            <div class="w-card">
+                <div class="w-heading">
+                    <img src="image/love-icon-10001.png" alt="">
+                    <h3>LOVE CALCULATOR</h3>
+                </div>
+                <div class="w-body">
+                <img src="image/tenor.gif" alt="">
+                <p id="w-text"></p>
+                </div>
+                <div class="w-btn">
+                    <button type="button" id="w-btn">Try again</button>
+                </div>
+            </div>
         </div>
     </div>
     <script src="js/script.js"></script>
