@@ -4,6 +4,7 @@ function resultBox() {
     let warningBox = document.getElementById('warning');
     let warningText = document.getElementById('w-text');
     let warningbtn = document.getElementById('w-btn');
+    let resultBtn = document.getElementById('btn');
     if (first == "") {
         warningBox.style.display= "block";
         warningText.innerText = "Please enter your Name";
@@ -29,4 +30,9 @@ function resultBox() {
     warningbtn.addEventListener('click',function () {
         warningBox.style.display= "none";
     });
+    if (first.length == first.length) {
+        resultBtn.addEventListener("click", function(event){
+            event.preventDefault()
+          });
+    }
 }

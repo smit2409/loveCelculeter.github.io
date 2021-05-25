@@ -86,7 +86,10 @@
             font-size: 30px;
             font-weight: bold;
         }
-        
+        .name-input span > img{
+            display: inline-block;
+            width: 35px;
+        }
         .card button {
             padding: 0.5rem 1rem;
             border-radius: 5px;
@@ -224,6 +227,9 @@
             .warning{
                 background: #2b2b2bbf;
             }
+            .name-input span > img{
+                margin-top: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -239,7 +245,10 @@
                             <input class="input-value" id="first-val" type="text" placeholder="Your Name">
                         </div>
                         <div>
-                            <span> <i class="fa fa-heart" aria-hidden="true"></i> </span>
+                            <span> 
+                                <!-- <i class="fa fa-heart" aria-hidden="true"></i> -->
+                                <img src="image/1447892.gif" alt="">
+                             </span>
                         </div>
                         <div>
                             <input class="input-value" id="last-val" type="text" placeholder="Love Name">
