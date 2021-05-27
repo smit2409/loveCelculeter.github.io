@@ -64,12 +64,17 @@ function resultBox() {
                 setTimeout(
                     function () {
                         let resultval = resultInput.value
-                        // let audioPlay = document.querySelector('audio');
                         let heartVal = document.getElementById('heart-result');
                         percentageR.style.display = "block";
                         percentageImage.setAttribute("src","image/clapping-hand.gif");
                         heartVal.innerText = resultval;
-                        percentageText.innerText = `On the way to fulfilling your love`;
+                        percentageText.innerText = `Your love tracking to fulfill...`;
+                        audioPlay.innerHTML = 
+                        `<audio controls autoplay>
+                            <source class="audio-play" src=""  type="audio/mp3"> 
+                            <source class="audio-play" src="" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>`
                     },
                     1000);
             }
@@ -80,7 +85,6 @@ function resultBox() {
                 setTimeout(
                     function () {
                         let resultval = resultInput.value
-                        // let audioPlay = document.querySelector('audio');
                         let heartVal = document.getElementById('heart-result');
                         percentageR.style.display = "block";
                         percentageImage.setAttribute("src","image/cry-sorry.gif");
@@ -107,16 +111,25 @@ function resultBox() {
     });
 
     // percentage box pop pop ne bandh karva 
+    
+    // time limit in percentage box pop pop display none 
+    // setTimeout(function(){percentageR.style.display= "none";},6000);
+
+    // btn click to display none 
 
     let percentageBtn = document.getElementById('p-btn');
     percentageBtn.addEventListener('click',function () {
         percentageR.style.display= "none";
+        resultBtn.disabled = true;
     });
 
-    resultBtn.addEventListener('click', function (event) {
-        if (first.length == first.length) {
-            // console.log('gg');
-            event.preventDefault();
-        }
-    });
+    // btn to not dbl click
+    let firstInput = document.getElementById('first-val');
+    let lastInput = document.getElementById('last-val');
+    firstInput.addEventListener('input', function(){
+        resultBtn.disabled = false;
+    })
+    lastInput.addEventListener('input', function(){
+        resultBtn.disabled = false;
+    })
 }
