@@ -1,11 +1,11 @@
 function resultBox() {
     let first = document.getElementById('first-val').value;
     let last = document.getElementById('last-val').value;
+    let resultInput = document.getElementById('result');
+    let resultBtn = document.getElementById('btn');
     let warningBox = document.getElementById('warning');
     let warningText = document.getElementById('w-text');
     let warningbtn = document.getElementById('w-btn');
-    let resultBtn = document.getElementById('btn');
-    let resultInput = document.getElementById('result');
     let percentageR = document.getElementById('percentage-box');
 
     if (first == "") {
@@ -30,7 +30,7 @@ function resultBox() {
                                                     
         // warning pop pop print karava mate 
 
-        let loveData = Math.floor(Math.random() * 100);
+        let loveData = Math.floor(Math.random() * 101);
         document.getElementById('result').value = loveData + '%';
 
         // result pop pop print krava mate 
